@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>BlakkyDEV</h1>
+    <div data-container class="container disable">
+        <h2>Image Editor</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label for="" class="title">Filters</label>
+                    <div class="options">
+                        <button data-filter-btn id="brightness" class="active">Brightness</button>
+                        <button id="saturation" data-filter-btn>Saturation</button>
+                        <button id="inversion" data-filter-btn>Inversion</button>
+                        <button id="grayscale" data-filter-btn>Grayscale</button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-intro">
+                            <p data-filter-name>Brightness</p>
+                            <p data-filter-value>100%</p>
+                        </div>
+                        <label for="">
+                            <input data-filter-slider type="range" max="200" min="0" value="100">
+                        </label>
+                    </div>
+                    <div class="rotate">
+                        <label for="" class="title">Rotate & Flip</label>
+                        <div class="options">
+                            <button data-rotate id="left"><img src="./rotate-left.png" alt=""></button>
+                            <button data-rotate id="right"><img src="./rotate-right.png" alt=""></button>
+                            <button data-rotate id="horizontal"><img src="./flip.png" alt=""></button>
+                            <button data-rotate id="vertical"><img src="./flip (1).png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img data-preview-img src="./preview (1).png" alt="Preview-img">
+            </div>
+        </div>
+        <div class="controls">
+            <button data-reset>Reset Filters</button>
+            <div class="row">
+                <input type="file" data-image-input accept="image/*" hidden>
+                <button data-choose-img>Choose Image</button>
+                <button data-save-img>Save Image</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js" defer></script>
+</body>
+</html>
